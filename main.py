@@ -4,6 +4,7 @@ def limparTela():
     os.system('cls' if os.name == 'nt' else 'clear')
     
 def main():
+    limparTela()
     usuarioLogado = None
     print("Bem-vindo ao sistema de gerenciamento de tarefas.")
     while True:
@@ -46,7 +47,7 @@ def main():
             try:
                 escolha = int(input("Escolha uma opção: "))
                 if escolha == 1:
-                    menuTarefas()
+                    menuTarefas(usuarioLogado)
                     limparTela()
                     pass
                 elif escolha == 2:
@@ -66,6 +67,7 @@ def main():
 
 def menuTarefas(loginUsuario):
     while True:
+        limparTela()
         print(f"MENU DE TAREFAS (Usuário: {loginUsuario})")
         print("_=+=+=+=+=+=+=+=+=+=+=+=+=+=+=_")
         print("|[1] Cadastrar Tarefa         |")
@@ -100,3 +102,36 @@ def menuTarefas(loginUsuario):
         except Exception as e:
             input(f"Erro: {e}. Pressione Enter para continuar...")
             continue
+
+def menuRelatorios():
+    while True:
+        limparTela()
+        print("_=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+_")
+        print("|             MENU DE RELATÓRIOS             |")
+        print("*--------------------------------------------*")
+        print("|[1] Ver Relatório de Produtividade (Geral)  |")
+        print("|[2] Exportar Relatório para TXT             |")
+        print("|[3] Voltar ao Menu Principal                |")
+        print("*--------------------------------------------*")
+
+        try:
+            opcao = int(input("Escolha uma opção: "))
+            if opcao == 1:
+                pass
+                # relatorioProdutividade.gerarRelatorioGeral() um exemplo
+            elif opcao == 2:
+                pass
+                # relatorioProdutividade.exportarRelatorioTXT() um exemplo
+            elif opcao == 3:
+                limparTela()
+                break
+            else:
+                input("Opção inválida. Tente novamente. Pressione Enter para continuar...")
+        except Exception as e:
+            input(f"Erro: {e}. Pressione Enter para continuar...")
+            limparTela()
+            continue
+
+        
+        
+
