@@ -20,12 +20,12 @@ def main():
                 escolha = int(input("Escolha uma opção: "))
                 if escolha == 1:
                     pass
-                    # usuarioLogado = usuarios.autenticarUsuario()
                     limparTela()
+                    usuarioLogado = usuarios.autenticarUsuario()
                 elif escolha == 2:
                     pass
-                    # usuarios.cadastrarUsuario()
                     limparTela()
+                    usuarios.cadastrarUsuario()
                 elif escolha == 3:
                     pass
                     print("Saindo do sistema.")
@@ -47,8 +47,8 @@ def main():
             try:
                 escolha = int(input("Escolha uma opção: "))
                 if escolha == 1:
-                    menuTarefas(usuarioLogado)
                     limparTela()
+                    menuTarefas(usuarioLogado)
                     pass
                 elif escolha == 2:
                     limparTela()
