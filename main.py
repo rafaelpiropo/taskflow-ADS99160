@@ -131,7 +131,4 @@ def menuRelatorios():
             input(f"Erro: {e}. Pressione Enter para continuar...")
             limparTela()
             continue
-
-        
-        
-
+    

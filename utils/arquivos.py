@@ -23,11 +23,12 @@ def ler_dados(arquivo):
 
 def salvar_dados(arquivo, dados):
     """
-    Salva dados em um arquivo .txt (em formato JSON de novo).
+    Salva dados em um arquivo .txt (Mas de novo, colocamos em formato JSON).
     """
     try:
-        with open(arquivo, 'w', encoding='utf-8') as f:
-            json.dump(dados, f, indent=4, ensure_ascii=False) 
+        with open(arquivo, 'w', encoding='utf-8') as arq:  
+            json.dump(dados, arq, indent=4, ensure_ascii=False) 
             # Aqui o dump ta só salvando os dados no arquivo txt em formato JSON com identação de 4 espaços
+            # E o ensure_ascii=False é pra garantir que caracteres especiais sejam salvos corretamente
     except Exception as e:
         print(f"Erro ao salvar dados em {arquivo}: {e}") # Retorna essa mensagem se apresentar qualquer tipo de erro
