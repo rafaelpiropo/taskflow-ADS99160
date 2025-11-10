@@ -46,3 +46,4 @@ def cadastrarUsuario():
     usuarios.append(novoUsuario)
     salvar_dados(ARQUIVO_USUARIOS, usuarios)
     input(f"\n[SUCESSO] Usuário '{login}' cadastrado com sucesso! Pressione Enter para continuar...")
+    limparTela()

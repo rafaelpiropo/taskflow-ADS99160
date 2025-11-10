@@ -31,10 +31,11 @@ def main():
                     print("Saindo do sistema.")
                     break
                 else:
-                    input("Opção inválida. Tente novamente. Pressione Enter para continuar...")
+                    input("Opção inválida. Pressione Enter para continuar...")
                     limparTela()
-            except ValueError:
-                print("Entrada inválida. Por favor, insira um número.")
+            except Exception:
+                input("Opção inválida. Pressione Enter para continuar...")
+                limparTela()
                 continue
 
         else:
@@ -132,3 +133,4 @@ def menuRelatorios():
             limparTela()
             continue
     
+main()
